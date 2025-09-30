@@ -95,18 +95,18 @@
         }
 
         .category-logo {
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 8px rgba(27, 181, 193, 0.5));
-        }
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px var(--glow-primary));
+}
 
-        h2 {
-            font-size: clamp(1.5rem, 5vw, 2rem);
-            font-weight: 700;
-            color: var(--accent-secondary);
-            text-shadow: 0 0 8px rgba(27, 181, 193, 0.5);
+h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 700;
+    color: var(--accent-secondary);
+    text-shadow: 0 0 8px var(--glow-primary);
         }
 
         p {
@@ -153,37 +153,37 @@
         }
 
         .button {
-            position: relative;
-            overflow: hidden;
-            display: inline-block;
-            padding: 14px 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: 2px solid var(--accent-secondary);
-            color: var(--text-light);
-            background-color: transparent;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-                        box-shadow 0.3s ease-out,
-                        background-color 0.3s ease-out,
-                        border-color 0.3s ease-out,
-                        color 0.3s ease-out;
-            box-shadow: 0 0 8px rgba(27, 181, 193, 0.4);
-            text-align: center;
-            cursor: pointer;
-        }
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 14px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--accent-secondary);
+    color: var(--text-light);
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.3s ease-out,
+                background-color 0.3s ease-out,
+                border-color 0.3s ease-out,
+                color 0.3s ease-out;
+    box-shadow: 0 0 8px var(--glow-primary);
+    text-align: center;
+    cursor: pointer;
+}
 
-        .button::after {
-            content: '';
-            position: absolute;
-            left: -150%;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(27, 226, 240, 0.25), transparent);
-            transition: left 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
+.button::after {
+    content: '';
+    position: absolute;
+    left: -150%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--glow-primary), transparent);
+    transition: left 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
         .button:hover::after {
             left: 150%;
